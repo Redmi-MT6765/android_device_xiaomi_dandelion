@@ -62,6 +62,7 @@ ro.mtk_perf_simple_start_win=1
 
 # Graphics
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+debug.cpurend.vsync=false
 
 # Power
 sys.ipo.pwrdncap=2
