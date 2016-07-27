@@ -620,4 +620,7 @@
     -->
     <bool name="config_enableWifiDisplay">true</bool>
 
+    <!-- True if the device supports Sustained Performance Mode-->
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
 </resources>
