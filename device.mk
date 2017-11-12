@@ -48,6 +48,7 @@ TARGET_SCREEN_WIDTH := 720
 PRODUCT_PACKAGES += \
     init.mt6762.rc \
     init.mt6765.rc \
+    init.safailnet.rc \
     fstab.mt6762 \
     fstab.mt6765
 
