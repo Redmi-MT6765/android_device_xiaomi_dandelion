@@ -107,8 +107,5 @@ ro.surface_flinger.supports_background_blur=1
 persist.sys.sf.disable_blurs=1
 ro.sf.blurs_are_expensive=1
 
-# Display
-ro.sf.lcd_density=320
-
 # Privapp permissions whitelisting
 ro.control_privapp_permissions=log
