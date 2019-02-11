@@ -669,12 +669,25 @@
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array name="config_defaultPinnerServiceFiles">
-        <item>/data/dalvik-cache/arm/system@framework@boot.oat</item>
-        <item>/data/dalvik-cache/arm/system@framework@services.jar@classes.dex</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
         <item>/system/framework/arm/boot.oat</item>
         <item>/system/framework/oat/arm/services.odex</item>
         <item>/system/framework/arm/boot-framework.oat</item>
         <item>/system/framework/arm/boot-core-libart.oat</item>
+        <item>/apex/com.android.runtime/javalib/core-oj.jar</item>
+        <item>/product/priv-app/SystemUI/SystemUI.apk</item>
+        <item>/product/priv-app/SystemUI/oat/arm/SystemUI.odex</item>
+        <item>/apex/com.android.runtime/javalib/core-libart.jar</item>
+        <item>/apex/com.android.media/javalib/updatable-media.jar</item>
+        <item>/system/lib/libRScpp.so</item>
+        <item>/system/lib/libRS.so</item>
+        <item>/system/lib/libRS_internal.so</item>
+        <item>/system/lib/libbcinfo.so</item>
+        <item>/system/lib/libRSDriver.so</item>
+        <item>/system/lib/libRSCpuRef.so</item>
+        <item>/system/lib/libblas.so</item>
+        <item>/system/lib/libsurfaceflinger.so</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
