@@ -613,6 +613,9 @@
          Equivalent to 67/255 (default for this device)    -->
     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.26274509804</item>
 
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
+
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
     <!== [0,1,5,7] for TYPE_MOBILE, TYPE_WIFI, TYPE_MOBILE_HIPRI and TYPE_BLUETOOTH -->
