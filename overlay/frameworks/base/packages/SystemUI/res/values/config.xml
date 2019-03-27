@@ -24,8 +24,4 @@
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
 
-    <!-- Max visible notification icons -->
-    <integer name="config_maxVisibleNotificationIcons">4</integer>
-    <integer name="config_maxVisibleNotificationIconsWhenDark">4</integer>
-
 </resources>

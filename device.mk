@@ -146,6 +146,10 @@ PRODUCT_PACKAGES += \
     ScreenRecordOverlay \
     FPSInfoOverlay
 
+# Cutout
+PRODUCT_PACKAGES += \
+    NotchBarKiller
+
 # Screen density
 PRODUCT_AAPT_CONFIG := xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
