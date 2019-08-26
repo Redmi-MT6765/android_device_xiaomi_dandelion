@@ -28,6 +28,7 @@
  */
 
 #include <cstdlib>
+#include <stdlib.h>
 #include <fstream>
 #include <string.h>
 #include <sys/sysinfo.h>
@@ -42,6 +43,7 @@
 
 using android::base::GetProperty;
 using android::init::property_set;
+using std::string;
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
@@ -49,6 +51,16 @@ char const *heapsize;
 char const *heapminfree;
 char const *heapmaxfree;
 char const *heaptargetutilization;
+
+void property_override(string prop, string value)
+{
+    auto pi = (prop_info*) __system_property_find(prop.c_str());
+
+    if (pi != nullptr)
+        __system_property_update(pi, value.c_str(), value.size());
+    else
+        __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
+}
 
 void check_device()
 {
@@ -93,4 +105,12 @@ void vendor_load_properties()
     property_set("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_set("dalvik.vm.heapminfree", heapminfree);
     property_set("dalvik.vm.heapmaxfree", heapmaxfree);
+
+    string model = "Redmi G25 Series";
+
+    // Override all partitions' props
+    string prop_partitions[] = { "", "odm.", "product.", "system.", "vendor." };
+    for (const string &prop : prop_partitions) {
+        property_override(string("ro.product.") + prop + string("model"), model);
+    }
 }

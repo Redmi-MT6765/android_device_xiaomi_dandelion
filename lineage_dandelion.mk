@@ -27,15 +27,15 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := dandelion
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MANUFACTURER := xiaomi
 PRODUCT_NAME := lineage_dandelion
-PRODUCT_MODEL := Redmi 9A
 
 # Build info
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR := xiaomi
 TARGET_VENDOR_PRODUCT_NAME := dandelion
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="dandelion-user 10 QP1A.190711.020 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="dandelion-user 10 QP1A.190711.020 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := google/sunfish/sunfish:11/RQ2A.210305.006/7119741:user/release-keys
