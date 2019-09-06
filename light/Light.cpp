@@ -68,6 +68,10 @@ namespace {
     }
 
     static inline uint32_t scaleBrightness(uint32_t brightness, uint32_t maxBrightness) {
+        if (brightness == 0) {
+            return 0;
+        }
+
         return (brightness - 1) * (maxBrightness - 1) / (0xFF - 1) + 1;
     }
 
