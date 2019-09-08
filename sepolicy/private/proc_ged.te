@@ -1,0 +1,1 @@
+allowxperm domain proc_ged:file { getattr open read map ioctl };
