@@ -84,10 +84,6 @@ namespace {
         set(LCD_LED BRIGHTNESS, brightness);
     }
 
-    static void handleNotification(const LightState&) {
-        ALOGI("ignore to handle notification since the device has no led");
-    }
-
     static inline bool isStateLit(const LightState& state) {
         return state.color & 0x00ffffff;
     }
@@ -105,9 +101,6 @@ namespace {
 
     /* Keep sorted in the order of importance. */
     static std::vector<LightBackend> backends = {
-            { Type::ATTENTION, handleNotification },
-            { Type::NOTIFICATIONS, handleNotification },
-            { Type::BATTERY, handleNotification },
             { Type::BACKLIGHT, handleBacklight },
     };
 
@@ -156,6 +149,11 @@ namespace android {
                     Return<Status> Light::setLight(Type type, const LightState& state) {
                         /* Lock global mutex until light state is updated. */
                         std::lock_guard<std::mutex> lock(globalLock);
+
+                        if(type == Type::ATTENTION || type == Type::NOTIFICATIONS || type == Type::BATTERY){
+                            /* Notification led is not supported, so ignore it. */
+                            return Status::SUCCESS;
+                        }
 
                         LightStateHandler handler = findHandler(type);
                         if (!handler) {
