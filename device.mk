@@ -116,9 +116,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ImsInit
 
-# Trustonic TEE
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries-trustonic.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-trustonic.txt
+
+# RcsService
+PRODUCT_PACKAGES += \
+    RcsService
 
 # Screen density
 PRODUCT_AAPT_CONFIG := xhdpi
