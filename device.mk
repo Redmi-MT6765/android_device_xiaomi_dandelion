@@ -81,6 +81,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.dandelion
 
+# KPOC
+PRODUCT_PACKAGES += \
+    libsuspend \
+    android.hardware.health@2.0
+
 # IMS
 PRODUCT_BOOT_JARS += \
     mediatek-common \
