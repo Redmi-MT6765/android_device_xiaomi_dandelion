@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/dtb.img:dtb.img
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.dandelion
+
 # Screen density
 PRODUCT_AAPT_CONFIG := xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
