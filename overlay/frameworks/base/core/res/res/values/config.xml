@@ -209,11 +209,20 @@
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
      <bool name="config_wifi_background_scan_support">true</bool>
 
+    <!-- Indicates that connected MAC randomization is supported on this device -->
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+
     <!-- Wifi driver supports batched scan -->
      <bool name="config_wifi_batched_scan_supported">false</bool>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
      <bool name="config_wifi_dual_band_support">false</bool>
+
+    <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
+         Note: This config is replacing the config_wifi_dual_band_support
+         since more bands may now be supported (such as 6GHz), the naming dual_band
+         is no longer indicative, and a separate config now exists for each band -->
+     <bool name="config_wifi5ghzSupport">false</bool>
 
     <!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->
      <bool name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">true</bool>
@@ -277,6 +286,9 @@
          wifi should not stick to bad networks -->
      <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-83</integer>
      <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
+
+    <!-- Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default">Redmi_G25_Series</string>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
