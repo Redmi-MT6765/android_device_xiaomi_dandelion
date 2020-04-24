@@ -94,17 +94,8 @@
          on the headphone/microphone jack. When false use the older uevent framework. -->
      <bool name="config_useDevInputEventForAudioJack">true</bool>
 
-    <!-- Indicates that connected MAC randomization is supported on this device -->
-    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
-
     <!-- Wifi driver supports batched scan -->
      <bool name="config_wifi_batched_scan_supported">false</bool>
-
-    <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
-         Note: This config is replacing the config_wifi_dual_band_support
-         since more bands may now be supported (such as 6GHz), the naming dual_band
-         is no longer indicative, and a separate config now exists for each band -->
-     <bool name="config_wifi5ghzSupport">false</bool>
 
     <!-- Height of the status bar -->
      <dimen name="status_bar_height_portrait">24.0dip</dimen>
@@ -151,9 +142,6 @@
 
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
      <integer name="config_shutdownBatteryTemperature">600</integer>
-
-    <!-- Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default">Redmi_G25_Series</string>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
