@@ -51,6 +51,10 @@ PRODUCT_PACKAGES += \
     fstab.mt6762 \
     fstab.mt6765
 
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-Dandelion
+
 # Fstab
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.mt6762:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6762 \

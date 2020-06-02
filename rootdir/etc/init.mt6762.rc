@@ -9,16 +9,11 @@ on init
     mount none /vendor/lost+found /vendor/overlay bind
     chown system system /dev/input/event3
 
-service charger /system/bin/charger
-    class charger
-    critical
-    group system graphics
-    seclabel u:r:healthd:s0
+on property:persist.sys.dandelion.dt2w=0
+    exec /system/bin/sendevent /dev/input/event3 0 1 4
 
-on charger
-    # Turn backlight on and switch to backlight trigger
-    write /sys/class/leds/lcd-backlight/brightness "1000"
-    write /sys/class/leds/lcd-backlight/trigger "backlight"
+on property:persist.sys.dandelion.dt2w=1
+    exec /system/bin/sendevent /dev/input/event3 0 1 5
 
 on fs
     mount_all /vendor/etc/fstab.mt6765 --early
