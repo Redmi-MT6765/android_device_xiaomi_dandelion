@@ -127,3 +127,6 @@ ro.vendor.audio.voice.volume.boost=manual
 # end of device/xiaomi/common/system_in.prop
 
 #
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
