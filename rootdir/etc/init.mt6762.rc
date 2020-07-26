@@ -12,5 +12,9 @@ on fs
     mount_all /vendor/etc/fstab.mt6765 --late
 
 on post-fs
-    mount none /system/etc/fstab.mt6762 /vendor/etc/fstab.mt6762 bind
-    mount none /system/etc/fstab.mt6765 /vendor/etc/fstab.mt6765 bind
+    # Unmount the overridden fstab because the SELinux label is incorrect
+    # and some MTK daemons can crash because of that
+    # (at post-fs, the fstab has already been used to mount the partitions,
+    #  so it is fine to just revert back)
+    umount /vendor/etc/fstab.mt6762
+    umount /vendor/etc/fstab.mt6765
