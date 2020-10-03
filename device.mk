@@ -102,6 +102,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ImsInit
 
+# Trustonic TEE
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/public.libraries-trustonic.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-trustonic.txt
+
 # Screen density
 PRODUCT_AAPT_CONFIG := xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi

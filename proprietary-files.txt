@@ -42,3 +42,8 @@ bin/kpoc_charger
 etc/init/kpoc_charger.rc
 lib/libshowlogo.so
 lib/libsysenv_system.so
+
+# Trustonic TEE
+lib/libMcRegistry.so
+lib/libteeservice_client.trustonic.so
+lib/vendor.trustonic.teeregistry@1.0.so
