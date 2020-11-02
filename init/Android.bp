@@ -17,6 +17,7 @@ cc_library_static {
     name: "libinit_dandelion",
     srcs: ["init_dandelion.cpp"],
     recovery_available: true,
+    shared_libs: ["libbase"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init"
