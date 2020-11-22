@@ -6,6 +6,7 @@ on init
     # We only need it to be overridden before things are mounted
     mount none /system/etc/fstab.mt6762 /vendor/etc/fstab.mt6762 bind
     mount none /system/etc/fstab.mt6765 /vendor/etc/fstab.mt6765 bind
+    mount none /vendor/lost+found /vendor/overlay bind
 
 on fs
     mount_all /vendor/etc/fstab.mt6765 --early
