@@ -1,5 +1,10 @@
-allow untrusted_app_all proc:file { read open getattr map ioctl };
-allow untrusted_app_all hal_memtrack_hwservice:hwservice_manager { find };
+allow untrusted_app_all proc:file { read open getattr map ioctl rw_file_perms rx_file_perms };
+allow untrusted_app_all hal_memtrack_hwservice:hwservice_manager { find add };
 allow untrusted_app_all mtk_hal_mms:binder { transfer };
-allow untrusted_app_all ashmem_device:chr_file { getattr open read map ioctl };
-allow untrusted_app_all vendor_default_prop:file { getattr open map read };
+allow untrusted_app_all ashmem_device:chr_file { getattr open read map ioctl rw_file_perms rx_file_perms };
+allow untrusted_app_all vendor_default_prop:file { getattr open map read r_file_perms };
+allow untrusted_app_all proc:file { getattr open map read r_file_perms };
+allow untrusted_app_all proc_net_tcp_udp:file { getattr open map read r_file_perms };
+allow untrusted_app_all proc_tty_drivers:file { getattr open map read r_file_perms };
+allow untrusted_app_all proc_version:file { getattr open map read r_file_perms };
+allow untrusted_app_all app_data_file:file { getattr open map read r_file_perms execute rx_file_perms };

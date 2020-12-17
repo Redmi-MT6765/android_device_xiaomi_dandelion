@@ -1,1 +1,1 @@
-allow { appdomain -isolated_app } hal_mms_hwservice:hwservice_manager find;
+allow { appdomain -isolated_app } hal_mms_hwservice:hwservice_manager { find add };

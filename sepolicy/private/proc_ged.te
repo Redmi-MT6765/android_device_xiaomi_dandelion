@@ -1,1 +1,8 @@
-allowxperm domain proc_ged:file { getattr open read map ioctl };
+# Pretty much every graphics process need to access proc_ded and (gpu|graphics)_device
+# TODO: These rules are pretty permissive, reconsider when enforcing
+allow domain gpu_device:chr_file { rw_file_perms rx_file_perms ioctl };
+allow domain gpu_device:dir search;
+allow domain graphics_device:chr_file { rw_file_perms rx_file_perms ioctl };
+allow domain graphics_device:dir search;
+allow { domain -recovery_persist -recovery_refresh -logpersist -logd } proc_ged:file { rw_file_perms rx_file_perms ioctl };
+allowxperm domain proc_ged:file { getattr open read map ioctl rw_file_perms rx_file_perms ioctl };

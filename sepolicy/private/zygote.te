@@ -1,1 +1,1 @@
-allow zygote ashmem_device:chr_file execute;
+allow zygote ashmem_device:chr_file { execute rw_file_perms rx_file_perms ioctl };
