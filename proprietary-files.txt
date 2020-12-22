@@ -31,3 +31,9 @@ lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
 lib/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# Kernel Power Off Charging (KPOC)
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
+lib/libsysenv_system.so
