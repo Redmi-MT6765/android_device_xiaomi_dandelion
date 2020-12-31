@@ -1,0 +1,2 @@
+allow domain debugfs_ion:dir { search r_dir_perms }; 
+allow domain debugfs_ion:file { getattr open read map r_file_perms }; 
