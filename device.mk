@@ -43,6 +43,8 @@ TARGET_SCREEN_WIDTH := 720
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.mt6762.rc \
+    init.mt6765.rc \
     fstab.mt6762 \
     fstab.mt6765
 
