@@ -27,6 +27,8 @@ dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 # Display
 debug.sf.disable_backpressure=1
 debug.sf.latch_unsignaled=1
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
 ro.opengles.version=196610
 ro.zygote.preload.enable=0
 vendor.display.enable_default_color_mode=0
@@ -101,3 +103,13 @@ persist.dbg.wfc_avail_ovr=1
 # OMX
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
+debug.stagefright.ccodec=0
+
+# Blurs
+ro.surface_flinger.supports_background_blur=1
+
+# Display
+ro.sf.lcd_density=320
+
+# Privapp permissions whitelisting
+ro.control_privapp_permissions=log
