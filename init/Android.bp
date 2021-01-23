@@ -20,6 +20,6 @@ cc_library_static {
     shared_libs: ["libbase"],
     include_dirs: [
         "system/core/base/include",
-        "system/core/init"
-    ]
+        "system/core/init",
+    ],
 }
