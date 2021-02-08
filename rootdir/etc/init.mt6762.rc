@@ -15,13 +15,6 @@ on init
     write /sys/block/dm-1/queue/read_ahead_kb 2048
     write /sys/block/dm-2/queue/read_ahead_kb 2048
 
-    # Custom overrides that need to happen right on boot
-    # Override vendor fstab
-    # We only need it to be overridden before things are mounted
-    mount none /system/etc/fstab.mt6762 /vendor/etc/fstab.mt6762 bind
-    mount none /system/etc/fstab.mt6765 /vendor/etc/fstab.mt6765 bind
-    mount none /system/etc/fstab.enableswap /vendor/etc/fstab.enableswap bind
-
     # Disable vendor overlay
     mount none /vendor/lost+found /vendor/overlay bind
 
@@ -62,13 +55,6 @@ on property:persist.sys.dandelion.dt2w=1
     exec /system/bin/sendevent /dev/input/event3 0 1 5
 
 on post-fs
-    # Unmount the overridden fstab because the SELinux label is incorrect
-    # and some MTK daemons can crash because of that
-    # (at post-fs, the fstab has already been used to mount the partitions,
-    #  so it is fine to just revert back)
-    umount /vendor/etc/fstab.mt6762
-    umount /vendor/etc/fstab.mt6765
-
     # Disable OEM Lights
     mount none /dev/null vendor/lib/hw/lights.mt6765.so bind
     mount none /dev/null vendor/lib/hw/android.hardware.light@2.0-impl-mediatek.so bind
@@ -97,8 +83,7 @@ on property:sys.boot_completed=1
     exec - root -- /system/bin/sh -c "am broadcast -a android.intent.action.AIRPLANE_MODE --ez state false"
 
     # ZRAM
-    swapon_all /system/etc/fstab.enableswap
-    umount /vendor/etc/fstab.enableswap
+    swapon_all /product/vendor_overlay/29/etc/fstab.enableswap
 
     # Runtime fs tuning for runtime performance
     write /sys/block/mmcblk0/queue/iostats 1

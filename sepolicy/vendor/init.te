@@ -1,9 +1,12 @@
-allow init vendor_configs_file:{ dir file } mounton;
-allow init vendor_overlay_file:{ dir file } mounton;
-allow init vendor_file:file { getattr open read map ioctl r_file_perms execute rx_file_perms };
+allow init vendor_configs_file:dir { search mounton r_dir_perms };
+allow init vendor_configs_file:file { getattr open read map ioctl mounton r_file_perms execute rx_file_perms };
+allow init vendor_overlay_file:dir { search mounton r_dir_perms };
+allow init vendor_overlay_file:file { getattr open read map ioctl mounton r_file_perms execute rx_file_perms };
+allow init vendor_file:dir { search mounton r_dir_perms };
+allow init vendor_file:file { getattr open read map ioctl mounton r_file_perms execute rx_file_perms };
 allow init unlabeled:file { getattr open read map ioctl r_file_perms execute rx_file_perms execute_no_trans };
 #This is in Android 8.0, but not 8.1
-allow vendor_init vendor_init:capability { sys_module };
+allow vendor_init vendor_init:capability { sys_module dac_override dac_read_search };
 
 domain_trans(init, rootfs, adbd)
 
