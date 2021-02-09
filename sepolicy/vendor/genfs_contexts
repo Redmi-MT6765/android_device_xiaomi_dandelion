@@ -1,1 +1,2 @@
 genfscon sysfs /board_properties u:object_r:sysfs_board_properties:s0
+genfscon proc  /gesture u:object_r:proc_tp:s0
