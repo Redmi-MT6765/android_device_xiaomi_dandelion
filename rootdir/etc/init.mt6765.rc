@@ -10,7 +10,14 @@ on init
     mount none /system/etc/fstab.mt6762 /vendor/etc/fstab.mt6762 bind
     mount none /system/etc/fstab.mt6765 /vendor/etc/fstab.mt6765 bind
     mount none /system/etc/fstab.enableswap /vendor/etc/fstab.enableswap bind
+
+    # Disable vendor overlay
     mount none /vendor/lost+found /vendor/overlay bind
+
+    # HACK: Disable Keymaster beanpod
+    mount none /system/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc /vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
+
+    # DT2W
     chown system system /dev/input/event3
 
 on property:persist.sys.dandelion.dt2w=0
