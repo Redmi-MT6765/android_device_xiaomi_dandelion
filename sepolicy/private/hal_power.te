@@ -1,2 +1,2 @@
 r_dir_file(hal_power, proc_tp)
-allow hal_power proc_tp:file { getattr open read write ioctl };
+allow hal_power proc_tp:file { getattr open read write map ioctl };
