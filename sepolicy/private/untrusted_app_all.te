@@ -1,0 +1,5 @@
+allow untrusted_app_all proc:file { read open getattr };
+allow untrusted_app_all hal_memtrack_hwservice:hwservice_manager { find };
+allow untrusted_app_all mtk_hal_mms:binder { transfer };
+allow untrusted_app_all ashmem_device:chr_file { getattr open read };
+allow untrusted_app_all vendor_default_prop:file { getattr open map read };
