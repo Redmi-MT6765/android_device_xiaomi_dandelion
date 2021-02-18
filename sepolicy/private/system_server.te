@@ -1,0 +1,2 @@
+allow system_server default_android_service:service_manager { find add };
+allow system_server init:binder { call transfer };
