@@ -6,3 +6,6 @@ add_hwservice(untrusted_app_all, hal_mms_hwservice)
 # Allow binder calls from untrusted_app_all to mtk_hal_mms and vice versa
 binder_call(untrusted_app_all, mtk_hal_mms)
 binder_call(mtk_hal_mms, untrusted_app_all)
+
+# Allow gmscore_app to add and find mtk_hal_mms_hwservice
+add_hwservice(gmscore_app, hal_mms_hwservice)
