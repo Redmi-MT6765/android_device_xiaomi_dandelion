@@ -110,6 +110,11 @@ ro.sf.blurs_are_expensive=1
 # Privapp permissions whitelisting
 ro.control_privapp_permissions=log
 
+# WFD
+persist.sys.wfd.nohdcp=1 
+persist.debug.wfd.enable=1 
+persist.sys.wfd.virtual=0
+
 # Power Saving
 ro.ril.power_collapse=1
 power.saving.mode=1
