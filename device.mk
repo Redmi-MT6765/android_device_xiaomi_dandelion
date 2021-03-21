@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DT2W-Service-Dandelion
 
+# Battery
+PRODUCT_PACKAGES += \
+    BatteryHealthOverlay
+
 # Fstab
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.mt6762:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6762 \

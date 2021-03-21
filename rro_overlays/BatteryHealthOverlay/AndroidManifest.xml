@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="id.my.wulan17.batteryhealth"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <application
+            android:hasCode="false"
+            android:label="@string/overlay_name" />
+
+    <overlay
+            android:targetPackage="com.android.settings"
+            android:isStatic="true"
+            android:priority="0" />
+
+</manifest>
