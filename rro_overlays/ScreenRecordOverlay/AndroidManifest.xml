@@ -2,7 +2,7 @@
     package="id.my.wulan17.scrd"
     android:versionCode="1"
     android:versionName="1.0">
-    <overlay android:isStatic="true" android:targetPackage="com.android.systemui" android:priority="97" />
+    <overlay android:isStatic="true" android:targetPackage="com.android.systemui" android:priority="1" />
 
     <application android:extractNativeLibs="false" android:label="@string/overlay_name" android:hasCode="false" />
 
