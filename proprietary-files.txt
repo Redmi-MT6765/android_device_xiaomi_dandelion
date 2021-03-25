@@ -10,6 +10,7 @@
 -framework/mediatek-ims-legacy.jar
 -framework/mediatek-ims-wwop-common.jar
 -priv-app/ImsService/ImsService.apk
+framework/mediatek-res.apk
 bin/vtservice
 etc/init/init.vtservice.rc
 lib/libcomutils.so
@@ -31,6 +32,10 @@ lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
 lib/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# Bluetooth Codec
+lib/libldacBT_abr.so
+lib/libldacBT_enc.so
 
 # Kernel Power Off Charging (KPOC)
 bin/kpoc_charger
