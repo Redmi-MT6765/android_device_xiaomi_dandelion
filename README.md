@@ -1,6 +1,8 @@
 Device configuration for Redmi 9A (dandelion)
 =================================================
 
+#### Dependencies of building: [*patches*](https://github.com/zijianjiao2017/patches)
+
 The Redmi 9A (codenamed dandelion) is an entry-level smartphone from Xiaomi, released in July 2020.
 
 | Feature                 | Specification                     |
