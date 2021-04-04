@@ -39,6 +39,9 @@ on post-fs
 
 on boot
 
+on property:init.svc.console=running
+    setprop init.svc.console stopped
+
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
