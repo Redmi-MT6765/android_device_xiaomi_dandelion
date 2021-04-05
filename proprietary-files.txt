@@ -32,6 +32,8 @@ lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
 lib/vendor.mediatek.hardware.videotelephony@1.0.so
+lib/libgui_stock.so
+lib/vndk-29/libgui_stock.so
 
 # Bluetooth Codec
 lib/libldacBT_abr.so
