@@ -231,6 +231,7 @@
 
     <!-- Height of the status bar -->
      <dimen name="status_bar_height_portrait">24.0dip</dimen>
+     <dimen name="status_bar_height_landscape">24.0dip</dimen>
 
     <!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
     
