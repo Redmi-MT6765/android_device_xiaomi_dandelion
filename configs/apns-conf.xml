@@ -35197,6 +35197,8 @@
         mnc="07"
         apn="3gnet"
         type="default,supl"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
         read_only ="true"
     />
 
@@ -35205,6 +35207,8 @@
         mnc="07"
         apn="hkw"
         type="default,supl"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
         read_only ="true"
         mvno_type="imsi"
         mvno_match_data="454078"
@@ -35215,6 +35219,8 @@
         mnc="07"
         apn="cuhkiot"
         type="default,supl"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
         read_only ="true"
         mvno_type="imsi"
         mvno_match_data="454079"
@@ -35232,6 +35238,8 @@
         mnc="09"
         apn="cmnet"
         type="default"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="csl"
@@ -35514,6 +35522,8 @@
         password="vnet.mobi"
         type="default,supl"
         authtype="3"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="China Telecom"
@@ -35524,6 +35534,8 @@
         password="vnet.mobi"
         type="default,supl"
         authtype="3"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="IMS"
@@ -35547,6 +35559,8 @@
         mmsc="http://mmsc.vnet.mobi"
         type="mms"
         authtype="3"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="3 Macau"
@@ -35608,6 +35622,8 @@
         password="vnet.mobi"
         type="default,supl"
         authtype="3"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="China Telecom"
@@ -35618,6 +35634,8 @@
         password="vnet.mobi"
         type="default,supl"
         authtype="3"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="China Telecom 4G"
@@ -35626,6 +35644,8 @@
         mnc="07"
         type="internet"
         authtype="2"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="China Telecom"
@@ -35639,6 +35659,8 @@
         mmsc="http://mmsc.vnet.mobi"
         type="mms"
         authtype="2"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="cellcard"
@@ -35851,6 +35873,8 @@
         mnc="00"
         apn="cmnet"
         type="default,supl"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动 (China Mobile) WAP"
@@ -35860,6 +35884,8 @@
         port="80"
         proxy="10.0.0.172"
         type="default,supl"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动彩信 (China Mobile)"
@@ -35872,6 +35898,8 @@
         port="80"
         proxy="10.0.0.172"
         type="mms"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动 (China Mobile) IMS"
@@ -35880,6 +35908,7 @@
         apn="ims"
         type="ims"
         protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="沃宽带用户连接互联网"
@@ -35952,6 +35981,8 @@
         mnc="02"
         apn="cmnet"
         type="default,supl"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动 (China Mobile) WAP"
@@ -35961,6 +35992,8 @@
         port="80"
         proxy="10.0.0.172"
         type="default,supl"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动彩信 (China Mobile)"
@@ -35973,6 +36006,8 @@
         port="80"
         proxy="10.0.0.172"
         type="mms"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动 (China Mobile) IMS"
@@ -35981,6 +36016,7 @@
         apn="ims"
         type="ims"
         protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国电信 (China Telecom) GPRS"
@@ -35991,6 +36027,8 @@
         password="vnet.mobi"
         type="default,hipri,internet,supl"
         user="ctnet@mycdma.cn"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国电信彩信 (China Telecom)"
@@ -36005,6 +36043,8 @@
         password="vnet.mobi"
         type="mms"
         user="ctwap@mycdma.cn"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="IMS"
@@ -36104,6 +36144,8 @@
         mnc="07"
         apn="cmnet"
         type="default,supl"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动 (China Mobile) WAP"
@@ -36113,6 +36155,8 @@
         port="80"
         proxy="10.0.0.172"
         type="default,supl"
+        protocol="IPV4V6"
+        oaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动彩信 (China Mobile)"
@@ -36125,6 +36169,8 @@
         port="80"
         proxy="10.0.0.172"
         type="mms"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动 (China Mobile) IMS"
@@ -36133,6 +36179,7 @@
         apn="ims"
         type="ims"
         protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动 (China Mobile) GPRS"
@@ -36141,7 +36188,7 @@
         apn="cmnet"
         type="default,supl,net,xcap"
         protocol="IPV4V6"
-        roaming_protocol="IP"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国移动彩信 (China Mobile)"
@@ -36154,7 +36201,7 @@
         mmsproxy="10.0.0.172"
         mmsport="80"
         type="mms"
-        protocol="IP"
+        protocol="IPV4V6"
         roaming_protocol="IPV4V6"
     />
 
@@ -36228,6 +36275,8 @@
         password="vnet.mobi"
         type="default,hipri,internet,supl"
         user="ctnet@mycdma.cn"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="IMS"
@@ -36253,6 +36302,8 @@
         password="vnet.mobi"
         type="mms"
         user="ctwap@mycdma.cn"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="中国电信 (China Telecom) GPRS"
