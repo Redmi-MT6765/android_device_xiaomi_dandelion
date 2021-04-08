@@ -1,0 +1,2 @@
+ # ZRAM - Compressed RAM based Block Device (SWAP)
+ /dev/block/zram0                                none        swap   defaults    zramsize=55%,max_comp_streams=8

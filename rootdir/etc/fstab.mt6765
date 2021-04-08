@@ -93,6 +93,3 @@ product /product ext4 ro wait,logical,first_stage_mount,
 
 
 /dev/block/platform/bootdevice/by-name/vbmeta /vbmeta emmc defaults defaults
-
- # ZRAM - Compressed RAM based Block Device (SWAP)
- /dev/block/zram0                                none        swap   defaults    zramsize=55%,max_comp_streams=8

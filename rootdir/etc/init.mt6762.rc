@@ -1,4 +1,5 @@
 import /system/etc/init/init.safailnet.rc
+import /system/etc/init/init.ago.rc
 
 on init
     setprop sys.usb.ffs.aio_compat 1
@@ -8,6 +9,7 @@ on init
     # We only need it to be overridden before things are mounted
     mount none /system/etc/fstab.mt6762 /vendor/etc/fstab.mt6762 bind
     mount none /system/etc/fstab.mt6765 /vendor/etc/fstab.mt6765 bind
+    mount none /system/etc/fstab.enableswap /vendor/etc/fstab.enableswap bind
     mount none /vendor/lost+found /vendor/overlay bind
     chown system system /dev/input/event3
 
@@ -56,3 +58,7 @@ on property:sys.boot_completed=1
 
     exec - root -- /system/bin/sh -c "settings put global airplane_mode_on 0"
     exec - root -- /system/bin/sh -c "am broadcast -a android.intent.action.AIRPLANE_MODE --ez state false"
+
+    # ZRAM
+    swapon_all /system/etc/fstab.enableswap
+    umount /vendor/etc/fstab.enableswap
