@@ -26,7 +26,6 @@ dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 
 # Display
 debug.sf.disable_backpressure=1
-debug.sf.latch_unsignaled=1
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
 ro.opengles.version=196610
@@ -110,3 +109,65 @@ ro.sf.blurs_are_expensive=1
 
 # Privapp permissions whitelisting
 ro.control_privapp_permissions=log
+
+# Power Saving
+ro.ril.power_collapse=1
+power.saving.mode=1
+usb_wakeup=enable
+wifi.supplicant_scan_interval=220
+ro.config.hw_power_saving=true
+ro.config.hw_power_saving=1
+power_supply.wakeup=enable
+ro.ril.disable.power.collapse=0
+
+# Perf
+profiler.force_disable_ulog=true
+profiler.force_disable_err_rpt=true
+profiler.force_disable_err_rpt=1
+ro.kernel.android.checkjni=0
+ro.vold.umsdirtyratio=20
+ro.min_pointer_dur=1
+pm.sleep_mode=1
+debug.performance.tuning=1
+dev.pm.dyn_samplingrate=1
+debug.enabletr=true
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.checkjni=false
+proximity_incall=enable
+persist.sys.purgeable_assets=1
+ro.config.hw_fast_dormancy=1
+ro.debuggable=1
+profiler.force_disable_ulog=1
+ro.mot.eri.losalert.delay=1000
+debug.kill_allocating_task=0
+ro.secure=0
+persist.sys.use_dithering=1
+ro.config.low_ram=true
+
+# GPU Perf
+force_hw_ui=true
+ro.sf.compbypass.enable=0
+hwui.render_dirty_regions=false
+debug.sf.latch_unsignaled=1
+persist.sys.use_16bpp_alpha=1
+ro.max.fling_velocity=20000
+ro.config.enable.hw_accel=true
+hw2d.force=1
+debug.composition.type=hw
+ro.product.gpu.driver=1
+ro.min.fling_velocity=18000
+debug.egl.hw=1
+hwui.disable_vsync=true
+sys.use_fifo_ui=1
+debug.gralloc.enable_fb_ubwc=1
+debug.sf.hw=1
+debug.composition.type=gpu
+debug.overlayui.enable=1
+debug.egl.profiler=1
+debug.egl.swapinterval=-60
+persist.sys.ui.hw=1
+ro.fb.mode=1
+ro.config.hw_quickpoweron=true
+video.accelerate.hw=1
+ro.config.disable.hw_accel=false
+hw3d.force=1
