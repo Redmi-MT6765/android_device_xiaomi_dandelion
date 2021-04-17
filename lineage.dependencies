@@ -1,0 +1,10 @@
+[
+ {
+   "repository"  : "android_vendor_xiaomi_dandelion",
+   "target_path" : "vendor/xiaomi/dandelion"
+ },
+ {
+   "repository"  : "device_mediatek_sepolicy",
+   "target_path" : "device/mediatek/sepolicy"
+ }
+]
