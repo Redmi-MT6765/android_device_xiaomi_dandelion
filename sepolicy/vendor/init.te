@@ -1,0 +1,4 @@
+allow init vendor_configs_file:{ dir file } mounton;
+allow init vendor_overlay_file:{ dir file } mounton;
+allow init vendor_file:file { getattr open read map ioctl r_file_perms execute rx_file_perms };
+allow init unlabeled:file { getattr open read map ioctl r_file_perms execute rx_file_perms execute_no_trans };

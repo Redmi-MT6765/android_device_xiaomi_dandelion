@@ -1,8 +1,0 @@
-# Adapted from the "recovery_only" macro
-define(`system_only', ifelse(target_recovery, `true', , $1))
-
-# Define only in system because we can't skip checkpolicy
-# in recovery.
-system_only(`
-  allow mediacodec default_prop:file { read open map getattr r_file_perms };
-');

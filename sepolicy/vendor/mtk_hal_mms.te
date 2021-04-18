@@ -4,6 +4,9 @@ allow { appdomain -isolated_app } hal_mms_hwservice:hwservice_manager { find add
 add_hwservice(untrusted_app_all, hal_mms_hwservice)
 
 # Allow binder calls from untrusted_app_all to mtk_hal_mms and vice versa
+allow untrusted_app_all mtk_hal_mms:binder { transfer };
+allow mtk_hal_mms untrusted_app_all:binder { transfer };
+
 binder_call(untrusted_app_all, mtk_hal_mms)
 binder_call(mtk_hal_mms, untrusted_app_all)
 
