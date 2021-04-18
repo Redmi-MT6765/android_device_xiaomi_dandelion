@@ -3,4 +3,3 @@ allow mtk_hal_light system_file:dir r_dir_perms;
 allow mtk_hal_light sysfs:file { rw_file_perms rx_file_perms ioctl };
 
 allow mtk_hal_light sysfs_leds:lnk_file { rw_file_perms rx_file_perms ioctl };
-
