@@ -38,7 +38,7 @@ TARGET_VENDOR_PRODUCT_NAME := dandelion
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=dandelion \
     PRODUCT_NAME=dandelion \
-    PRIVATE_BUILD_DESC="dandelion-user 10 QP1A.190711.020 V12.0.11.0.QCDMIXM release-keys"
+    PRIVATE_BUILD_DESC="dandelion-user 10 QP1A.190711.020 V12.0.12.0.QCDMIXM release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
