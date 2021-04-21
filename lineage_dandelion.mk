@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# Inherit from dandelion device makefile
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
@@ -25,18 +22,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit from dandelion device makefile
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_BRAND := Redmi
-PRODUCT_DEVICE := dandelion
-PRODUCT_MANUFACTURER := xiaomi
 PRODUCT_NAME := lineage_dandelion
+PRODUCT_DEVICE := dandelion
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := Redmi G25 Series
+PRODUCT_MANUFACTURER := xiaomi
 
 # Build info
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR := xiaomi
 TARGET_VENDOR_PRODUCT_NAME := dandelion
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=dandelion \
+    PRODUCT_NAME=dandelion \
     PRIVATE_BUILD_DESC="dandelion-user 10 QP1A.190711.020 V12.0.11.0.QCDMIXM release-keys"
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := google/sunfish/sunfish:11/RQ2A.210305.006/7119741:user/release-keys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)

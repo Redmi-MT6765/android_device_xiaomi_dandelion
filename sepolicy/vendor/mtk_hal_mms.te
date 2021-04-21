@@ -12,3 +12,6 @@ binder_call(mtk_hal_mms, untrusted_app_all)
 
 # Allow gmscore_app to add and find mtk_hal_mms_hwservice
 add_hwservice(gmscore_app, hal_mms_hwservice)
+
+permissive mtk_hal_mms;
+permissive hal_mms_hwservice;

@@ -1,5 +1,8 @@
-allow { appdomain -isolated_app } hal_mms_server:binder { transfer };
-allow hal_mms_server { appdomain -isolated_app }:binder { transfer };
+allow coredomain hal_mms_server:binder { call transfer };
+allow hal_mms_server coredomain:binder { call transfer };
+
+binder_call(coredomain, hal_mms_server)
+binder_call(hal_mms_server, coredomain)
 
 binder_call({appdomain -isolated_app}, hal_mms_server)
 binder_call(hal_mms_server, {appdomain -isolated_app})

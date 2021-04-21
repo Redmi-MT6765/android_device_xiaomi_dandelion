@@ -25,24 +25,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/dandelion/dandelion-vendor.mk)
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_configuration.xml
-
-# GcamGo
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
-
 # Treble
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
 PRODUCT_SHIPPING_API_LEVEL := 29
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -51,6 +36,25 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 720
+
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_configuration.xml
+
+PRODUCT_PACKAGES += \
+    audio.a2dp.default
+
+# GcamGo
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -92,6 +96,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/dtb.img:dtb.img
 
+# Properties
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.dandelion
@@ -115,6 +122,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
 PRODUCT_PACKAGES += \
@@ -135,4 +144,4 @@ PRODUCT_PACKAGES += \
 # Screen density
 PRODUCT_AAPT_CONFIG := xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-PRODUCT_AAPT_PREBUILT_DPI := xhdpi
+PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi

@@ -6,3 +6,5 @@ add_service(radio, wfo_service);
 # IMS needs to read settings
 allow radio system_app_data_file:dir { getattr open read map ioctl search r_dir_perms };
 allow radio system_app_data_file:file { getattr open read map ioctl r_file_perms };
+
+permissive radio;
