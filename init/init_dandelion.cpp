@@ -108,8 +108,8 @@ void vendor_load_properties()
 
     string model = "Redmi G25 Series";
 
-    // Override all partitions' props
-    string prop_partitions[] = { "", "odm.", "product.", "system.", "vendor." };
+    // Override odm and vendor partitions' props
+    string prop_partitions[] = { "odm.", "vendor." };
     for (const string &prop : prop_partitions) {
         property_override(string("ro.product.") + prop + string("model"), model);
     }
