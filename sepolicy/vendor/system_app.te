@@ -5,3 +5,5 @@ allow system_app sysfs_battery_supply:file { getattr open read map ioctl r_file_
 allow system_app sysfs_zram:dir { getattr open read map ioctl search r_dir_perms };
 allow system_app sysfs_zram:file { getattr open read write map ioctl r_file_perms rw_file_perms };
 allow system_app kernel:system { syslog_read };
+allow system_app sysfs_batteryinfo:dir { search r_dir_perms };
+allow system_app sysfs_batteryinfo:file { getattr open read map ioctl r_file_perms };
