@@ -52,3 +52,10 @@ lib/vendor.trustonic.teeregistry@1.0.so
 
 # Crypto
 etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
+
+# MTK
+-priv-app/EngineerMode/EngineerMode.apk
+lib/libem_support_jni.so
+lib/libem_usb_jni.so
+lib/libem_wifi_jni.so
+lib/libem_audio_jni.so
