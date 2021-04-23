@@ -140,6 +140,11 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay
 
+# SystemUI
+PRODUCT_PACKAGES += \
+    ScreenRecordOverlay \
+    FPSInfoOverlay
+
 # Screen density
 PRODUCT_AAPT_CONFIG := xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
