@@ -13,10 +13,11 @@ vendor /vendor ext4 ro wait,logical,first_stage_mount,
 
 product /product ext4 ro wait,logical,first_stage_mount,
 # 137 "vendor/mediatek/proprietary/hardware/fstab/mt6765/fstab.in.mt6765"
+
 /dev/block/platform/bootdevice/by-name/md_udc /metadata ext4 noatime,nosuid,nodev wait,formattable,first_stage_mount
 
 
-/dev/block/platform/bootdevice/by-name/userdata /data f2fs noatime,nosuid,nodev,nodiscard,flush_merge,reserve_root=134217,resgid=1065,alloc_mode=reuse,fsync_mode=nobarrier latemount,wait,check,quota,reservedsize=128M,formattable,checkpoint=fs,encryptable=aes-256-xts
+/dev/block/platform/bootdevice/by-name/userdata /data f2fs noatime,nosuid,nodev,nodiscard,flush_merge,reserve_root=134217,resgid=1065,alloc_mode=reuse,fsync_mode=nobarrier wait,check,quota,reservedsize=128M,formattable,checkpoint=fs,encryptable=aes-256-xts
 
 /dev/block/platform/bootdevice/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc wait,check,formattable
 
