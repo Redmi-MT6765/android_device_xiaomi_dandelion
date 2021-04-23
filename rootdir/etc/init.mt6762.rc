@@ -1,5 +1,6 @@
 import /system/etc/init/init.safailnet.rc
 import /system/etc/init/init.ago.rc
+import /system/etc/init/kpoc_charger.rc
 
 on init
     setprop sys.usb.ffs.aio_compat 1
@@ -80,8 +81,6 @@ on post-fs
 
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/odm/etc/audio_policy_configuration.xml bind
-
-on boot
 
 on property:init.svc.console=running
     setprop init.svc.console stopped
