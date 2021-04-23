@@ -21,7 +21,7 @@ set -e
 DEVICE=dandelion
 VENDOR=xiaomi
 
-INITIAL_COPYRIGHT_YEAR=2020
+INITIAL_COPYRIGHT_YEAR=2021
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
