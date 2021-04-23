@@ -3,6 +3,7 @@
 
 # HALs
 /system/bin/hw/android\.hardware\.light@2\.0-service\.dandelion    u:object_r:mtk_hal_light_exec:s0
+/vendor/lib/hw/gralloc\.default\.so u:object_r:same_process_hal_file:s0
 
 # Vendor overlay
 /(product|system/product)/vendor_overlay/[0-9]+/lib/hw    u:object_r:vendor_hal_file:s0
