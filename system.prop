@@ -22,13 +22,13 @@ vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,co
 ro.charger.enable_suspend=true
 
 # Dex2oat
-dalvik.vm.image-dex2oat-filter=quicken 
-dalvik.vm.image-dex2oat-threads=8 
-dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 
-dalvik.vm.dex2oat-filter=quicken 
-dalvik.vm.dex2oat-threads=8 
-dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 
-dalvik.vm.boot-dex2oat-threads=8 
+dalvik.vm.image-dex2oat-filter=quicken
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.dex2oat-filter=quicken
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.boot-dex2oat-threads=8
 dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 
 # Display
@@ -119,26 +119,26 @@ persist.sys.sf.disable_blurs=1
 ro.sf.blurs_are_expensive=1
 
 # Memory Management
-ro.sys.fw.bservice_enable=true 
-ro.sys.fw.bservice_limit=5 
-ro.sys.fw.bservice_age=5000 
-ro.am.reschedule_service=true 
-ro.config.fha_enable=true 
-ro.sys.fw.bg_apps_limit=32 
-ro.config.dha_cached_max=16 
-ro.config.dha_empty_max=42 
-ro.config.dha_empty_init=32 
-ro.config.dha_lmk_scale=0.545 
-ro.config.dha_th_rate=2.3 
-ro.config.sdha_apps_bg_max=64 
+ro.sys.fw.bservice_enable=true
+ro.sys.fw.bservice_limit=5
+ro.sys.fw.bservice_age=5000
+ro.am.reschedule_service=true
+ro.config.fha_enable=true
+ro.sys.fw.bg_apps_limit=32
+ro.config.dha_cached_max=16
+ro.config.dha_empty_max=42
+ro.config.dha_empty_init=32
+ro.config.dha_lmk_scale=0.545
+ro.config.dha_th_rate=2.3
+ro.config.sdha_apps_bg_max=64
 ro.config.sdha_apps_bg_min=8
 
 # Privapp permissions whitelisting
 ro.control_privapp_permissions=log
 
 # WFD
-persist.sys.wfd.nohdcp=1 
-persist.debug.wfd.enable=1 
+persist.sys.wfd.nohdcp=1
+persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
 # Power Saving
