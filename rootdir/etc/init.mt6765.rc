@@ -61,9 +61,6 @@ on post-fs
     mount none /dev/null vendor/bin/hw/android.hardware.light@2.0-service-mediatek bind
     mount none /dev/null vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc bind
 
-    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
-    mount none /system/etc/audio_policy_configuration.xml /vendor/odm/etc/audio_policy_configuration.xml bind
-
 on property:init.svc.console=running
     setprop init.svc.console stopped
 
