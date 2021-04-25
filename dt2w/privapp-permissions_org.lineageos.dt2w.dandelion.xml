@@ -15,4 +15,5 @@
     <privapp-permissions package="org.lineageos.dt2w.dandelion">
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
+
 </permissions>
