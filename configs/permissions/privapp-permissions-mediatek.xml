@@ -285,4 +285,5 @@ applications that come with the platform
         <permission name="android.permission.RECEIVE_WAP_PUSH"/>
         <permission name="android.permission.FOREGROUND_SERVICE"/>
     </privapp-permissions>
+
 </permissions>
