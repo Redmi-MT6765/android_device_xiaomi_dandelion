@@ -35,7 +35,7 @@ lib/vendor.mediatek.hardware.videotelephony@1.0.so
 lib/libgui_stock.so
 lib/vndk-29/libgui_stock.so
 
-# Bluetooth Codec
+# Bluetooth
 lib/libldacBT_abr.so
 lib/libldacBT_enc.so
 
@@ -49,3 +49,6 @@ lib/libsysenv_system.so
 lib/libMcRegistry.so
 lib/libteeservice_client.trustonic.so
 lib/vendor.trustonic.teeregistry@1.0.so
+
+# Crypto
+etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
