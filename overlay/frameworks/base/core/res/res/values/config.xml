@@ -98,10 +98,11 @@
     <bool name="config_wifi_batched_scan_supported">false</bool>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">21.5dip</dimen>
+    <dimen name="status_bar_height">21.0dp</dimen>
+    <dimen name="status_bar_height_portrait">21.0dp</dimen>
 
     <!-- Height of the status bar in landscape -->
-    <dimen name="status_bar_height_landscape">20.0dp</dimen>
+    <dimen name="status_bar_height_landscape">20.5dp</dimen>
 
     <!-- The status bar padding before and after icons -->
     <dimen name="rounded_corner_content_padding">8dp</dimen>
