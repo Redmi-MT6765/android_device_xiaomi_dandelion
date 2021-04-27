@@ -44,9 +44,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
-# GcamGo
+# Camera
 PRODUCT_PACKAGES += \
-    GoogleCameraGo
+    CameraGo
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
