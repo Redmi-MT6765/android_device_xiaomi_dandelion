@@ -62,8 +62,7 @@ PRODUCT_PACKAGES += \
     init.safailnet.rc \
     init.ago.rc \
     fstab.mt6762 \
-    fstab.mt6765 \
-    fstab.enableswap
+    fstab.mt6765
 
 # DT2W
 PRODUCT_PACKAGES += \

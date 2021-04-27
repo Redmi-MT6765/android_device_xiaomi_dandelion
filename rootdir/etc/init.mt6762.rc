@@ -80,7 +80,7 @@ on property:sys.boot_completed=1
     exec - root -- /system/bin/sh -c "am broadcast -a android.intent.action.AIRPLANE_MODE --ez state false"
 
     # ZRAM
-    swapon_all /product/vendor_overlay/29/etc/fstab.enableswap
+    swapon_all /product/vendor_overlay/29/etc/fstab.mt6765
 
     # Runtime fs tuning for runtime performance
     write /sys/block/mmcblk0/queue/iostats 1
