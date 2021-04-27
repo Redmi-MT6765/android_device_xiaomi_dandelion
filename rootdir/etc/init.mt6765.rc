@@ -1,6 +1,7 @@
 import /system/etc/init/init.safailnet.rc
 import /system/etc/init/init.ago.rc
 import /system/etc/init/kpoc_charger.rc
+import /system/etc/init/init.vtservice.rc
 
 on init
     setprop sys.usb.ffs.aio_compat 1
