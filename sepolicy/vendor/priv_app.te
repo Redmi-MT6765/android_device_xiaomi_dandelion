@@ -1,4 +1,5 @@
 allow priv_app mnt_vendor_file:dir { getattr open read map ioctl search r_dir_perms };
 allow priv_app overlay_service:service_manager { find add };
+allow priv_app debugfs_ion:dir { getattr open read write map ioctl search r_dir_perms rw_dir_perms };
 
 permissive priv_app;

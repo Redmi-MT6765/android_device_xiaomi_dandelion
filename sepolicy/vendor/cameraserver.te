@@ -1,0 +1,4 @@
+#============= cameraserver ==============
+allow cameraserver vendor_default_prop:file { getattr open read map ioctl r_file_perms };
+
+permissive cameraserver;

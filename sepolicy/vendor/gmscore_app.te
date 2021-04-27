@@ -8,4 +8,6 @@ allow gmscore_app debugfs_ion:dir { getattr open read write map ioctl search r_d
 allow gmscore_app mtk_cmdq_device:chr_file { getattr open read write map ioctl r_file_perms rw_file_perms execute rx_file_perms };
 allow gmscore_app mtk_mdp_device:chr_file { getattr open read write map ioctl r_file_perms rw_file_perms execute rx_file_perms };
 
+allow gmscore_app debugfs_ion:dir { getattr open read map ioctl search r_dir_perms };
+
 permissive gmscore_app;
