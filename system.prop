@@ -18,9 +18,6 @@ persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera
 vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
 
-# Charger
-ro.charger.enable_suspend=true
-
 # Dex2oat
 dalvik.vm.image-dex2oat-filter=quicken
 dalvik.vm.image-dex2oat-threads=8
@@ -105,7 +102,6 @@ ro.zram.periodic_wb_delay_hours=24
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
-persist.vendor.vilte_support=0
 
 # OMX
 debug.stagefright.omx_default_rank.sw-audio=1
@@ -132,9 +128,6 @@ ro.config.dha_th_rate=2.3
 ro.config.sdha_apps_bg_max=64
 ro.config.sdha_apps_bg_min=8
 
-# Privapp permissions whitelisting
-ro.control_privapp_permissions=log
-
 # WFD
 persist.sys.wfd.nohdcp=1
 persist.debug.wfd.enable=1
@@ -145,15 +138,10 @@ ro.ril.power_collapse=1
 power.saving.mode=1
 usb_wakeup=enable
 wifi.supplicant_scan_interval=220
-ro.config.hw_power_saving=true
-ro.config.hw_power_saving=1
 power_supply.wakeup=enable
 ro.ril.disable.power.collapse=0
 
 # Perf
-profiler.force_disable_ulog=true
-profiler.force_disable_err_rpt=true
-profiler.force_disable_err_rpt=1
 ro.kernel.android.checkjni=0
 ro.vold.umsdirtyratio=20
 ro.min_pointer_dur=1
@@ -166,11 +154,8 @@ dalvik.vm.checkjni=false
 proximity_incall=enable
 persist.sys.purgeable_assets=1
 ro.config.hw_fast_dormancy=1
-ro.debuggable=1
-profiler.force_disable_ulog=1
 ro.mot.eri.losalert.delay=1000
 debug.kill_allocating_task=0
-ro.secure=0
 persist.sys.use_dithering=1
 ro.config.low_ram=true
 
@@ -183,7 +168,6 @@ persist.sys.use_16bpp_alpha=1
 ro.max.fling_velocity=20000
 ro.config.enable.hw_accel=true
 hw2d.force=1
-debug.composition.type=hw
 ro.product.gpu.driver=1
 ro.min.fling_velocity=18000
 debug.egl.hw=1
@@ -191,7 +175,6 @@ hwui.disable_vsync=true
 sys.use_fifo_ui=1
 debug.gralloc.enable_fb_ubwc=1
 debug.sf.hw=1
-debug.composition.type=gpu
 debug.overlayui.enable=1
 debug.egl.profiler=1
 debug.egl.swapinterval=-60

@@ -113,4 +113,28 @@ void vendor_load_properties()
     for (const string &prop : prop_partitions) {
         property_override(string("ro.product.") + prop + string("model"), model);
     }
+
+    // Override Privapp permissions whitelisting props
+    property_override(string("ro.control_privapp_permissions"), string("log"));
+
+    // Override Power Saving props
+    property_override(string("ro.config.hw_power_saving"), string("true"));
+
+    // Override Perf props
+    property_override(string("profiler.force_disable_err_rpt"), string("true"));
+    property_override(string("profiler.force_disable_ulog"), string("true"));
+
+    // Override GPU Perf props
+    property_override(string("debug.composition.type"), string("hw"));
+
+    // Override Debug props
+    property_override(string("ro.secure"), string("0"));
+    property_override(string("ro.debuggable"), string("1"));
+
+    // Override IMS props
+    property_override(string("persist.vendor.vilte_support"), string("0"));
+
+    // Override Charger props
+    property_override(string("ro.charger.enable_suspend"), string("true"));
+
 }
