@@ -1,5 +1,8 @@
-allow priv_app mnt_vendor_file:dir { getattr open read map ioctl search r_dir_perms };
-allow priv_app overlay_service:service_manager { find add };
-allow priv_app debugfs_ion:dir { getattr open read write map ioctl search r_dir_perms rw_dir_perms };
+allow priv_app sw_sync_device:chr_file rw_file_perms;
 
-permissive priv_app;
+allow priv_app mtk_hal_pq_hwservice:hwservice_manager find;
+binder_call(priv_app, mtk_hal_pq)
+get_prop(priv_app, vendor_displayfeature_prop)
+get_prop(priv_app, vendor_fp_prop)
+
+allow priv_app sysfs_thermal:dir r_dir_perms;

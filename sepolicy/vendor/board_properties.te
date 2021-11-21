@@ -1,4 +1,0 @@
-type sysfs_board_properties, fs_type, sysfs_type;
-
-allow system_server sysfs_board_properties:dir { search r_dir_perms };
-allow system_server sysfs_board_properties:file { getattr open read map ioctl r_file_perms };

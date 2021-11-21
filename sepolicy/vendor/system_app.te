@@ -1,18 +1,10 @@
-allow system_app proc_pagetypeinfo:file { getattr open read write map ioctl r_file_perms rw_file_perms execute rx_file_perms };
-allow system_app proc_vmallocinfo:file { getattr open read write map ioctl r_file_perms rw_file_perms execute rx_file_perms };
-allow system_app sysfs_battery_supply:dir { getattr open read map ioctl search r_dir_perms };
-allow system_app sysfs_battery_supply:file { getattr open read map ioctl r_file_perms };
-allow system_app sysfs_zram:dir { getattr open read map ioctl search r_dir_perms };
-allow system_app sysfs_zram:file { getattr open read write map ioctl r_file_perms rw_file_perms };
-allow system_app kernel:system { syslog_read };
-allow system_app sysfs_batteryinfo:dir { search r_dir_perms };
-allow system_app sysfs_batteryinfo:file { getattr open read map ioctl r_file_perms };
-# Allow system_app to read fps info node
-allow system_app sysfs_fps:dir { search r_dir_perms };
-allow system_app sysfs_fps:file { getattr open read map ioctl r_file_perms };
-allow system_app debugfs_ion:dir { getattr open read write map ioctl search r_dir_perms rw_dir_perms };
-#============= system_app ==============
-allow system_app system_data_file:dir { getattr open read write map ioctl search r_dir_perms add_name create setattr rw_dir_perms };
-allow system_app system_data_file:file { getattr open read write map ioctl r_file_perms rw_file_perms };
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file r_file_perms;
+allow system_app proc_pagetypeinfo:file r_file_perms;
+allow system_app proc_vmallocinfo:file r_file_perms;
 
-permissive system_app;
+allow system_app sw_sync_device:chr_file rw_file_perms;
+
+allow system_app mtk_hal_pq_hwservice:hwservice_manager find;
+binder_call(system_app, mtk_hal_pq)
+binder_call(system_app, wificond)

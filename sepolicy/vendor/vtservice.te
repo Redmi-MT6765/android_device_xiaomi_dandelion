@@ -1,4 +1,0 @@
-allow vtservice radio_service:service_manager add;
-allow vtservice vtservice_service:service_manager find;
-
-permissive vtservice;

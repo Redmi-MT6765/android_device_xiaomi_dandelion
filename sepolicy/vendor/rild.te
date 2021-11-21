@@ -1,11 +1,1 @@
-# Adapted from the "recovery_only" macro
-define(`system_only', ifelse(target_recovery, `true', , $1))
-
-# Define only in system because we can't skip checkpolicy
-# in recovery.
-system_only(`
-  # rild needs to read these props for IMS to work
-  allow rild exported3_default_prop:file { getattr open read map ioctl r_file_perms };
-');
-
-permissive rild;
+set_prop(rild, deviceid_prop)

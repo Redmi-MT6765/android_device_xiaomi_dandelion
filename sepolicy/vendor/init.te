@@ -1,16 +1,6 @@
-allow init vendor_configs_file:dir { search mounton r_dir_perms };
-allow init vendor_configs_file:file { getattr open read map ioctl mounton r_file_perms execute rx_file_perms };
-allow init vendor_overlay_file:dir { search mounton r_dir_perms };
-allow init vendor_overlay_file:file { getattr open read map ioctl mounton r_file_perms execute rx_file_perms };
-allow init vendor_file:dir { search mounton r_dir_perms };
-allow init vendor_file:file { getattr open read map ioctl mounton r_file_perms execute rx_file_perms };
-allow init unlabeled:file { getattr open read map ioctl r_file_perms execute rx_file_perms execute_no_trans };
-#This is in Android 8.0, but not 8.1
-allow vendor_init vendor_init:capability { sys_module dac_override dac_read_search };
-# Allow init to write gesture nodes
-allow init proc_tp:dir { search rw_dir_perms };
-allow init proc_tp:file { getattr open read write map ioctl r_file_perms rw_file_perms execute rx_file_perms };
+allow init hwservicemanager:binder call;
 
-domain_trans(init, rootfs, adbd)
-
-permissive init;
+allow init self:netlink_kobject_uevent_socket read;
+allow init sysfs_wake_lock:file r_file_perms;
+allow init same_process_hal_file:file execute;
+allow init vendor_data_file:file w_file_perms;

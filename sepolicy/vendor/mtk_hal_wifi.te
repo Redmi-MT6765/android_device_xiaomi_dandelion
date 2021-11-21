@@ -1,3 +1,0 @@
-allow mtk_hal_wifi vendor_default_prop:property_service { set };
-
-permissive mtk_hal_wifi;

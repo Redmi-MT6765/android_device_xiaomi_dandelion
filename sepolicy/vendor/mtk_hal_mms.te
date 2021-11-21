@@ -1,17 +1,8 @@
-allow { appdomain -isolated_app } hal_mms_hwservice:hwservice_manager { find add };
+type mtk_hal_mms_hwservice, hwservice_manager_type;
 
-# Allow untrusted_app_all to add and find mtk_hal_mms_hwservice
-add_hwservice(untrusted_app_all, hal_mms_hwservice)
+# Allow untrusted_app_29 to find mtk_hal_mms_hwservice
+allow { appdomain -isolated_app } mtk_hal_mms_hwservice:hwservice_manager find;
 
-# Allow binder calls from untrusted_app_all to mtk_hal_mms and vice versa
-allow untrusted_app_all mtk_hal_mms:binder { transfer };
-allow mtk_hal_mms untrusted_app_all:binder { transfer };
-
-binder_call(untrusted_app_all, mtk_hal_mms)
-binder_call(mtk_hal_mms, untrusted_app_all)
-
-# Allow gmscore_app to add and find mtk_hal_mms_hwservice
-add_hwservice(gmscore_app, hal_mms_hwservice)
-
-permissive mtk_hal_mms;
-permissive hal_mms_hwservice;
+# Allow binder calls from untrusted_app_29 to mtk_hal_mms and vice versa
+binder_call(untrusted_app_29, mtk_hal_mms)
+binder_call(mtk_hal_mms, untrusted_app_29)

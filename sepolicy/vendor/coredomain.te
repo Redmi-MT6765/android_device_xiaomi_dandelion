@@ -1,1 +1,0 @@
-allow coredomain debugfs_ion:dir { getattr open read write map ioctl search r_dir_perms rw_dir_perms };

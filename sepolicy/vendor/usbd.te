@@ -1,0 +1,1 @@
+binder_call(usbd, hal_usb_default);

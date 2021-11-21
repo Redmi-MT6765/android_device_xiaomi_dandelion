@@ -1,3 +1,1 @@
-allow mtk_hal_camera default_prop:file { getattr open read map ioctl r_file_perms };
-
-permissive mtk_hal_camera;
+set_prop(mtk_hal_camera, vendor_mi_camera_prop)

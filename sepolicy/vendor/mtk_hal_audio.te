@@ -1,3 +1,0 @@
-typeattribute mtk_hal_audio hal_broadcastradio_client;
-
-permissive mtk_hal_audio;

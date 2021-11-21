@@ -1,6 +1,1 @@
-# Allow platform_app to read fps info node
-allow platform_app sysfs_fps:dir { search r_dir_perms };
-allow platform_app sysfs_fps:file { getattr open read map ioctl r_file_perms };
-allow platform_app debugfs_ion:dir { getattr open read write map ioctl search r_dir_perms rw_dir_perms };
-
-permissive platform_app;
+allow platform_app sysfs_fpsinfo:file rw_file_perms;
