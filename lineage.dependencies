@@ -4,7 +4,9 @@
    "target_path" : "vendor/xiaomi/dandelion"
  },
  {
-   "repository"  : "device_mediatek_sepolicy",
-   "target_path" : "device/mediatek/sepolicy"
+   "remote"	 : "github",
+   "repository"  : "PixelExperience/device_mediatek_sepolicy_vndr",
+   "target_path" : "device/mediatek/sepolicy_vndr",
+   "revision:	 : "eleven"
  }
 ]
